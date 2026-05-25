@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arci Digital — Tell us about your business so we can build a tailored growth strategy." />
+  <title>Arci Digital — Client Application</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient background -->
+  <div class="ambient">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grain"></div>
+  </div>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">A</span>
+      <span class="brand-name">ARCI <span class="brand-thin">DIGITAL</span></span>
+    </div>
+    <div class="progress-wrap" aria-hidden="true">
+      <div class="progress-meta">
+        <span id="progressLabel">0 / 10</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main form stage -->
+  <main class="stage">
+    <!-- Welcome screen -->
+    <section class="screen welcome active" data-screen="welcome">
+      <div class="welcome-inner">
+        <p class="eyebrow">CLIENT APPLICATION</p>
+        <h1 class="title">
+          Let's see if we're <em>the right fit.</em>
+        </h1>
+        <p class="subtitle">
+          A short, considered conversation about your business — so we can build a strategy that actually moves the needle.
+        </p>
+        <div class="welcome-actions">
+          <button class="btn btn-primary" id="startBtn">
+            Begin Application
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+          <span class="meta-time">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            Takes about 2 minutes
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Questions are injected here -->
+    <div id="questions"></div>
+
+    <!-- End screen -->
+    <section class="screen finish" data-screen="finish">
+      <div class="finish-inner">
+        <div class="finish-mark">
+          <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="26" cy="26" r="24" class="check-circle"/>
+            <path d="M14 27 L23 36 L40 18" class="check-path"/>
+          </svg>
+        </div>
+        <p class="eyebrow">APPLICATION RECEIVED</p>
+        <h2 class="title">Thank you. We've got it.</h2>
+        <p class="subtitle">
+          Our team will review your application within 24 hours. If it's a fit, you'll hear from us directly to schedule a strategy call.
+        </p>
+        <div class="finish-meta">
+          <span class="meta-pill">— Arci Digital</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer controls -->
+  <footer class="controls" id="controls" hidden>
+    <button class="btn-ghost" id="backBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="19" y1="12" x2="5" y2="12"/>
+        <polyline points="12 19 5 12 12 5"/>
+      </svg>
+      Back
+    </button>
+    <button class="btn btn-primary" id="nextBtn">
+      <span id="nextLabel">Continue</span>
+      <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </button>
+    <span class="hint"><kbd>Enter</kbd> to continue</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
